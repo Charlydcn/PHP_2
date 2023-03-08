@@ -36,109 +36,12 @@
 
     <?php
     
-        class Voiture
-            {
+        require "Voiture.php";
 
-                // ******************************* ATTRIBUTS *******************************
+        $v1 = new Voiture("Peugeot","408", 5, 0, false);
+        $v2 = new Voiture("Citroën","C4", 3, 0, false);
 
-                
-                private string $_marque;
-                private string $_modele;
-                private int $_nbPortes;
-                private float $_vitesseActuelle = 0;
-
-                public function __construct(string $marque, string $modele, int $nbPortes, float $vitesseActuelle)
-                {
-                    $this->_marque = $marque;
-                    $this->_modele = $modele;
-                    $this->_nbPortes = $nbPortes;
-                    $this->_vitesseActuelle = $vitesseActuelle;
-                }
-
-                // ******************************* MÉTHODES ****************************************************************                
-                // ******************************* ACCESSEURS (get) *******************************
-
-                public function getMarque() // !! A TESTER !!
-                {
-                    return $this->_marque;
-                }
-                
-                public function getmodele() // !! A TESTER !!
-                {
-                    return $this->_modele;
-                }
-                
-                public function getnbPortes() // !! A TESTER !!
-                {
-                    return $this->_nbPortes;
-                }
-                
-                public function getvitesseActuelle() // !! A TESTER !!
-                {
-                    return $this->_vitesseActuelle;
-                } 
-
-                // *******************************************************************************
-                // ******************************* MUTATEURS (set) *******************************
-
-                public function setMarque($marque) // !! A TESTER !!
-                {
-                    $this->_marque = $marque;
-                }
-
-                public function setmodele($modele) // !! A TESTER !!
-                {
-                    $this->_modele = $modele;
-                }
-
-                public function setnbPortes($nbPortes) // !! A TESTER !!
-                {
-                    $this->_nbPortes = $nbPortes;
-                }
-
-                public function setvitesseActuelle($vitesseActuelle) // !! A TESTER !!
-                {
-                    $this->_vitesseActuelle = $vitesseActuelle;
-                } 
-
-                // *******************************************************************************
-
-                public function demarrer() // !! A TESTER !!
-                {
-                    if ($state = false) {
-
-                        $state = true;
-
-                        if ($state = true) {
-
-                            $stateText = "Le véhicule " . $this->_marque . $this->_modele . "démarre";
-                            return $stateText;
-                            
-                        }
-
-                    } elseif ($state = true) {
-
-                        $alreadyTrue = "Le véhicule " . $this->_marque . "est déjà démarré !";
-                        return $alreadyTrue;
-                        
-                    } else {
-                        $stateError = "Erreur de type de donnée de l'état du véhicule.";
-                        return $stateError;
-                    }
-
-                }
-
-                public function accelerer() // !! A TESTER !!
-                {
-
-                }
-
-                public function stopper() // !! A TESTER !!
-                {
-
-                }
-
-            }
+        
         
     ?>
 

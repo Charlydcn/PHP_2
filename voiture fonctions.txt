@@ -8,12 +8,22 @@ en dehors de la classe ?
 
 lorsqu'on appelle la fonction demarrer:
 -> SI $state = false, il passe à true et on return "le véhicule 'marque' démarre"
--> SI $state = true, return "le véhicule 'marque' est déjà démarré !"
--> SI $state = autre, return "erreur blabla"
+SINON -> SI $state = true, return "le véhicule 'marque' est déjà démarré !"
+SINON -> return "erreur blabla"
 
 FONCTION accelerer :
 
-$acceleration = float x km/h
-
+SI la voiture est demarré alors
+vitesseActuelle = vitesseActuelle + $accelerer
+return "le véhicule 'marque' veut accélerer de $accelerer km/h"
+SINON -> return "Pour accélerer, il faut démarrer le véhicule . 'marque' . 'modele' !"
 
 FONCTION stopper :
+
+booléen $state qui défini si la voiture est démarré ou à l'arrêt
+false par défaut
+
+lorsqu'on appelle la fonction stopper :
+-> SI $state = true, il passe à false et on return "le véhicule 'marque' est stoppé"
+SINON -> SI $state = false, returne "Le véhicule 'marque' est déjà stoppé !
+SINON return "erreur blabla"
