@@ -1,0 +1,4 @@
+- tester tout les get et set
+- créer une méthode résumant toutes les infos de la voiture comme dans l'énoncé
+- tout commenter 
+- tout aérer

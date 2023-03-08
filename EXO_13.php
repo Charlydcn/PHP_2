@@ -23,6 +23,11 @@
             font-size:1em;
         }
 
+        .instruction {
+            opacity:80%;
+            font-weight:300;
+        }
+
     </style>
 </head>
 <body>
@@ -41,7 +46,52 @@
         $v1 = new Voiture("Peugeot","408", 5, 0, false);
         $v2 = new Voiture("Citroën","C4", 3, 0, false);
 
+
+        // echo "<h2>TEST FONCTION DEMARRER</h2>";
+
+        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->demarrer())."<br>";
+        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->demarrer())."<br>";
+        // echo ($v1->stopper())."<br>";
+        // echo ($v1->getcarState())."<br>";
+
+
+        // echo "<h2>TEST FONCTION STOPPER</h2>";
+
+        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->stopper())."<br>";
+        // echo ($v1->demarrer())."<br>";
+        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->stopper())."<br>";
+        // echo ($v1->getcarState())."<br>";
         
+
+        // echo "<h2>TEST FONCTION ACCELERER</h2>";
+
+        // echo ($v1->demarrer())."<br>";
+        // echo ($v1->getvitesseActuelle())."<br>";
+        // echo ($v1->accelerer(20))."<br>"; 
+        // echo ($v1->getvitesseActuelle())."<br>";
+        // echo ($v1->stopper())."<br>";
+        // echo ($v1->getvitesseActuelle())."<br>";
+        // echo ($v1->accelerer(20))."<br>";
+
+
+        // echo "<h2>TEST FONCTION RALENTIR</h2>";
+
+        // echo ($v2->ralentir(20))."<br>"; 
+        // echo ($v2->demarrer())."<br>";
+        // echo ($v2->getvitesseActuelle())."<br>";
+        // echo ($v2->ralentir(20))."<br>";
+        // echo ($v2->accelerer(20))."<br>";
+        // echo ($v2->ralentir(20))."<br>";
+        // echo ($v2->getvitesseActuelle())."<br>";
+        // echo ($v2->accelerer(20))."<br>";
+        // echo ($v2->getvitesseActuelle())."<br>";
+        // echo ($v2->ralentir(200))."<br>";
+
+
         
     ?>
 
