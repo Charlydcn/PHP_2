@@ -1,0 +1,19 @@
+FONCTION demarrer :
+
+booléen $state qui défini si la voiture est démarré ou à l'arrêt
+false par défaut
+
+on déclare $state uniquement dans ma fonction demarrer ? comment lui demander son état
+en dehors de la classe ?
+
+lorsqu'on appelle la fonction demarrer:
+-> SI $state = false, il passe à true et on return "le véhicule 'marque' démarre"
+-> SI $state = true, return "le véhicule 'marque' est déjà démarré !"
+-> SI $state = autre, return "erreur blabla"
+
+FONCTION accelerer :
+
+$acceleration = float x km/h
+
+
+FONCTION stopper :
