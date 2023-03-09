@@ -60,6 +60,7 @@
                 {
                     if ($this->_carState) {
                         return "Le véhicule" . " " . $this->_marque . " " . $this->_modele . " " . "est démarré";
+
                     } else {
                         return "Le véhicule" . " " . $this->_marque . " " . $this->_modele . " " . "est à l'arrêt";
                     }
@@ -131,18 +132,23 @@
                 public function accelerer($nbAccel) // CHECK
                 {
                     if ($this->_carState) {                                                                                                 // Si carState est true
+
                         echo "<span class='instruction'>Accélère de " . $nbAccel . " km/h </span>";                                         // echo de l'instruction donnée
                         $this->_vitesseActuelle += $nbAccel;                                                                                // On additionne nbAccel à la vitesse actuelle
                         return "Le véhicule" . " " . $this->_marque . " " . $this->_modele . " " . "accélère de " . $nbAccel . " km/h";     // return "Le véhicule..."
+
                     } else {                                                                                                                // Sinon, (si carState est false) alors
+
                         echo "<span class='instruction'>Accélère de " . $nbAccel . " km/h </span>";                                         // echo de l'instruction donnée
                         return "Pour accélérer, il faut démarrer le véhicule" . " " . $this->_marque . " " . $this->_modele . " " . " ! ";  // return "Pour accélérer, il faut..."
+
                     }
                 }
 
                 public function ralentir($nbRal) // CHECK
                 {
                     if ($this->_carState) {                                                         // Si carState est true
+                        
                         echo "<span class='instruction'>Ralentis de " . $nbRal . " km/h </span>";   // echo de l'instruction donnée
                         $this->_vitesseActuelle -= $nbRal;                                          // On soustrais nbRal à la vitesseActuelle
 
@@ -156,6 +162,7 @@
                         return "Le véhicule" . " " . $this->_marque . " " . $this->_modele . " " . "ralenti de " . $nbRal . " km/h"; // return "Le véhicule..."
 
                     } else {                                                                                                                        // Sinon (si carState est false)
+                        
                         echo "<span class='instruction'>Ralentis de " . $nbRal . " km/h </span>";                                                   // echo de l'instruction donnée
                         return "Pour ralentir, il faut que le véhicule " . " " . $this->_marque . " " . $this->_modele . " " . " soit démarré ! ";  // return "Pour ralentir, ..." 
 
