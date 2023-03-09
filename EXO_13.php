@@ -24,7 +24,7 @@
         }
 
         .instruction {
-            opacity:80%;
+            opacity:60%;
             font-weight:300;
         }
 
@@ -46,9 +46,29 @@
         $v1 = new Voiture("Peugeot","408", 5, 0, false);
         $v2 = new Voiture("Citroën","C4", 3, 0, false);
 
+        echo "<h2>SERIE DE TEST<br>*********************</h2>";
+
+        echo ($v1->demarrer())."<br>";
+        echo ($v1->accelerer(50))."<br>";
+        echo ($v1->ralentir(20))."<br>";
+        echo ($v2->demarrer())."<br>";
+        echo ($v2->stopper())."<br>";
+        echo ($v2->accelerer(20))."<br>";
+        echo "La vitesse du véhicule" . " " . $v1->getMarque() . " " . $v1->getModele() . " est de : " . ($v1->getvitesseActuelle())." km / h <br>";
+        echo "La vitesse du véhicule" . " " . $v2->getMarque() . " " . $v2->getModele() . " est de : " . ($v2->getvitesseActuelle())." km / h <br>";
+
+        $v1->setcarState(false);
+
+        echo "<h2>INFOS VÉHICULE 1<br>*********************</h2>" . $v1->getCarInfos();
+
+        echo "<h2>INFOS VÉHICULE 2<br>*********************</h2>" . $v2->getCarInfos();
+
+
+
+        // ********************************************* TESTS *********************************************
 
         // echo "<h2>TEST FONCTION DEMARRER</h2>";
-
+ 
         // echo ($v1->getcarState())."<br>";
         // echo ($v1->demarrer())."<br>";
         // echo ($v1->getcarState())."<br>";
@@ -57,7 +77,7 @@
         // echo ($v1->getcarState())."<br>";
 
 
-        // echo "<h2>TEST FONCTION STOPPER</h2>";
+        // echo "<h2>TEST FONCTION STOPPER</h2>"; 
 
         // echo ($v1->getcarState())."<br>";
         // echo ($v1->stopper())."<br>";

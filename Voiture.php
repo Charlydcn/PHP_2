@@ -12,6 +12,7 @@
     <?php
     
     class Voiture
+
             {
 
                 // ******************************* ATTRIBUTS *******************************
@@ -35,22 +36,22 @@
                 // ******************************* MÉTHODES ****************************************************************                
                 // ******************************* ACCESSEURS (get) *******************************
 
-                public function getMarque() // !! A TESTER !!
+                public function getMarque() // CHECK
                 {
                     return $this->_marque;
                 }
                 
-                public function getmodele() // !! A TESTER !!
+                public function getModele() // CHECK
                 {
                     return $this->_modele;
                 }
                 
-                public function getnbPortes() // !! A TESTER !!
+                public function getnbPortes() // CHECK
                 {
                     return $this->_nbPortes;
                 }
                 
-                public function getvitesseActuelle() // !! A TESTER !!
+                public function getvitesseActuelle() // CHECK
                 {
                     return $this->_vitesseActuelle;
                 }
@@ -67,27 +68,27 @@
                 // *******************************************************************************
                 // ******************************* MUTATEURS (set) *******************************
 
-                public function setMarque($marque) // !! A TESTER !!
+                public function setMarque($marque) // CHECK
                 {
                     $this->_marque = $marque;
                 }
 
-                public function setmodele($modele) // !! A TESTER !!
+                public function setmodele($modele) // CHECK
                 {
                     $this->_modele = $modele;
                 }
 
-                public function setnbPortes($nbPortes) // !! A TESTER !!
+                public function setnbPortes($nbPortes) // CHECK
                 {
                     $this->_nbPortes = $nbPortes;
                 }
 
-                public function setvitesseActuelle($vitesseActuelle) // !! A TESTER !!
+                public function setvitesseActuelle($vitesseActuelle) // CHECK
                 {
                     $this->_vitesseActuelle = $vitesseActuelle;
                 } 
 
-                public function setcarState($carState) // !! A TESTER !!
+                public function setcarState($carState) // CHECK
                 {
                     $this->_carState = $carState;
                 }
@@ -159,6 +160,15 @@
                         return "Pour ralentir, il faut que le véhicule " . " " . $this->_marque . " " . $this->_modele . " " . " soit démarré ! ";  // return "Pour ralentir, ..." 
 
                     }
+                }
+
+                public function getCarInfos() // CHECK
+                {
+                    $infos = "Nom et modèle du véhicule : " . " " . $this->_marque . " " . $this->_modele . "<br>";
+                    $infos .= "Nombre de portes : " . " " . $this->_nbPortes . "<br>";
+                    $infos .= $this->getcarState() . "<br>";
+                    $infos .= "Sa vitesse actuelle est de : " . $this->_vitesseActuelle . " km / h";
+                    return $infos;
                 }
 
                 
