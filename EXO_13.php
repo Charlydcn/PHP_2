@@ -57,8 +57,6 @@
         echo "La vitesse du véhicule" . " " . $v1->getMarque() . " " . $v1->getModele() . " est de : " . ($v1->getvitesseActuelle())." km / h <br>";
         echo "La vitesse du véhicule" . " " . $v2->getMarque() . " " . $v2->getModele() . " est de : " . ($v2->getvitesseActuelle())." km / h <br>";
 
-        $v1->setcarState(false);
-
         echo "<h2>INFOS VÉHICULE 1<br>*********************</h2>" . $v1->getCarInfos();
 
         echo "<h2>INFOS VÉHICULE 2<br>*********************</h2>" . $v2->getCarInfos();
