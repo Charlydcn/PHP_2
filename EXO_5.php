@@ -47,7 +47,7 @@
             foreach ($nomsInput as $nom) { 
                 echo 
                 "<label for='input'>$nom</label><br>
-                <input type='text' id='input' name='$nom'> <br>";
+                <input type='text' id='$name' name='$nom'> <br>";
             };
         }
         
