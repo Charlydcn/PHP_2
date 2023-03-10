@@ -43,7 +43,7 @@
             <option value='' disabled selected hidden>Sexe</option>"; // PLACEHOLDER DE LA LISTE GRACE A DISABLED SELECTED ET HIDDEN 
 
             foreach ($elements as $element) {
-                $select .= "<option>$element</option>";
+                $select .= "<option value='$element'>$element</option>";
             };
             $select .= "</select>";
             return $select."<br>";
