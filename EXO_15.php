@@ -27,29 +27,21 @@
 </head>
 <body>
 
-    <h1>Exo 7</h1>
-    <h2>Créer une fonction personnalisée permettant de générer des cases à cocher. On pourra préciser 
-        dans le tableau associatif si la case est cochée ou non.</h2>
+    <h1>Exo 15</h1>
+    <h2>En utilisant les ressources de la page http://php.net/manual/fr/book.filter.php, vérifier si une 
+        adresse e-mail a le bon format.</h2>
 
     <?php
 
-        $elements = [
-        "Choix 1"=>"",
-        "Choix 2"=>"Checked",
-        "Choix 3"=>""
-        ];
+        $email = "contact@elan";
 
-        echo genererCheckbox($elements);
-
-        function genererCheckbox(array $elements) {
-            foreach ($elements as $choix => $check) { 
-                echo 
-                "<input type='checkbox' id='$choix' $check>
-                <label for='$choix'>$choix</label><br>";
-            };
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "$email est une adresse e-mail valide";
+        } else {
+            echo "$email n'est pas une adresse e-mail valide";
         }
-    ?>
 
+    ?>
 
 </body>
 </html>

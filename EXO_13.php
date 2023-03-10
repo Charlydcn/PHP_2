@@ -67,22 +67,22 @@
 
         // echo "<h2>TEST FONCTION DEMARRER</h2>";
  
-        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->getcarStateText())."<br>";
         // echo ($v1->demarrer())."<br>";
-        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->getcarStateText())."<br>";
         // echo ($v1->demarrer())."<br>";
         // echo ($v1->stopper())."<br>";
-        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->getcarStateText())."<br>";
 
 
         // echo "<h2>TEST FONCTION STOPPER</h2>"; 
 
-        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->getcarStateText())."<br>";
         // echo ($v1->stopper())."<br>";
         // echo ($v1->demarrer())."<br>";
-        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->getcarStateText())."<br>";
         // echo ($v1->stopper())."<br>";
-        // echo ($v1->getcarState())."<br>";
+        // echo ($v1->getcarStateText())."<br>";
         
 
         // echo "<h2>TEST FONCTION ACCELERER</h2>";

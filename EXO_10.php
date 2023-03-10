@@ -43,25 +43,24 @@
         echo formulaire($coordonnees, $sexe, $formations); // J'echo ma fonction globale permettant de tout afficher
 
         function formulaire(array $coordonnees, array $sexe, array $formations) { // Je remplis mon $result contenant tout mon code qui sera return à la fin et qui sera echo si j'echo la fonction
-            $result = "<h2>FORMULAIRE</h2>";                        // Titre
-            $result .= "<form action='#' method='POST' autocomplete='off'>";           // J'ouvre ma balise form 
-            $result .= input($coordonnees);                         // Je concatène le $result de chaque fonction (coordonnees, sexe, formations)
-            $result .= radio($sexe);                                // Concaténisation de la fonction radio(array $sexe)
-            $result .= dropdown($formations);                       // Concaténisation de la fonction dropdown(array $formations)
-            $result .= "<br><input type='submit' value='Envoyer'>"; // Bouton submit
-            $result .= "</form>";                                   // Je mets ma balise fermante form pour pouvoir ajouter des sections si besoin sans avoir à tout déplacer
+            $result = "<h2>FORMULAIRE</h2>";                                      // Titre
+            $result .= "<form action='#' method='POST' autocomplete='off'>";      // J'ouvre ma balise form 
+            $result .= input($coordonnees);                                       // Je concatène le $result de chaque fonction (coordonnees, sexe, formations)
+            $result .= radio($sexe);                                              // Concaténisation de la fonction radio(array $sexe)
+            $result .= dropdown($formations);                                     // Concaténisation de la fonction dropdown(array $formations)
+            $result .= "<br><input type='submit' value='Envoyer'>";               // Bouton submit
+            $result .= "</form>";                                                 // Je mets ma balise fermante form à part pour pouvoir ajouter des sections si besoin sans avoir à tout déplacer
             return $result;
         }
 
-        function input(array $coordonnees) {                // Ma fonction (input)
-            $result = "";                                   // Je crée le résult qui sera renvoyer à la fin
-            foreach ($coordonnees as $info=>$type) {        // Pour chaque $info et son $type à l'intérieur de $coordonnees, exéctuer les instructions below
-                $result .=                                  // .= pour AJOUTER le code au résultat et non $result = le code
+        function input(array $coordonnees) {                                          // Ma fonction (input)
+            $result = "";                                                             // Je crée le résult qui sera renvoyer à la fin
+            foreach ($coordonnees as $info=>$type) {                                  // Pour chaque $info et son $type à l'intérieur de $coordonnees, exéctuer les instructions below
+                $result .=                                                            // .= pour AJOUTER le code au résultat et non $result = le code
                 "<label for='input'>$info</label><br>       
                 <input type='$type' id='$info' name='$info' value='' required> <br>"; // Je labellise mon input (le petit "Nom" au dessus), et je l'insère avec chaque info et type du tableau associatif 
             }
             return $result;  
-            
         }
 
         function radio(array $sexe) {

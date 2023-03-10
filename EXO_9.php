@@ -43,7 +43,7 @@
 
         function afficherRadio(array $nomsRadio) {
             foreach ($nomsRadio as $nom) { 
-                echo 
+                echo  // IL FAUT QUE LE NAME SOIT LE MEME PARTOUT POUR QU'ILS FASSENT TOUS PARTI DU MEME INPUT ET PUISSE SE DECOCHER LORSQU'ON COCHE UN AUTRE
                 "<input type='radio' id='$nom' name='radio'>
                 <label for='$nom'>$nom</label> <br>";
             };

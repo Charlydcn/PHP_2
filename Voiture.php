@@ -58,6 +58,11 @@
 
                 public function getcarState() // CHECK
                 {
+                    return $this->_carState;
+                }
+
+                public function getcarStateText() // CHECK
+                {
                     if ($this->_carState) {
                         return "Le véhicule" . " " . $this->_marque . " " . $this->_modele . " " . "est démarré";
 
@@ -173,13 +178,11 @@
                 {
                     $infos = "Nom et modèle du véhicule : " . " " . $this->_marque . " " . $this->_modele . "<br>";
                     $infos .= "Nombre de portes : " . " " . $this->_nbPortes . "<br>";
-                    $infos .= $this->getcarState() . "<br>";
+                    $infos .= $this->getcarStateText() . "<br>";
                     $infos .= "Sa vitesse actuelle est de : " . $this->_vitesseActuelle . " km / h";
                     return $infos;
                 }
-
                 
-
             }
     
     ?>

@@ -40,7 +40,9 @@
     $text = "Mon texte en paramètre";
 
     echo convertirMajRouge($text);
-    // echo convertirMajColor($text, "#555ABC");
+
+    // echo convertirMajColor($text, "#555ABC"); // Méthode permettant de le faire en changeant la couleur à sa guise
+
     function convertirMajRouge(string $phrase){
         return "<p class='red'>".mb_strtoupper($phrase)."</p>";
     }
